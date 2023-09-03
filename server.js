@@ -1,21 +1,21 @@
 // Packages needed for this application
 const inquirer = require("inquirer");
-const userQuestions = require("./lib/userQuestions.js");
+const userQuestions = require("./lib/questions/userQuestions.js");
 const mysqlConnection = require("./lib/mysql.js");
-const { getDepartments, addDepartment } = require("./routes/department.js");
+const { getDepartments, addDepartment } = require("./lib/routes/department.js");
 const {
   getEmployees,
   addEmployee,
   updateEmployee,
-} = require("./routes/employee.js");
-const { getRoles, addRole } = require("./routes/role.js");
+} = require("./lib/routes/employee.js");
+const { getRoles, addRole } = require("./lib/routes/role.js");
 
 // database connection
 const db = mysqlConnection;
 
 // function to show the user the questions
 function init() {
-  inquirer.prompt(userQuestions).then((answers) => {
+  inquirer.prompt(userQuestions).then(async (answers) => {
     const { question } = answers;
     switch (question) {
       case "View All Employees":
@@ -50,3 +50,5 @@ function init() {
 
 // call initialization of the app
 init();
+
+exports.init = init; // to avoid circular dependencies
