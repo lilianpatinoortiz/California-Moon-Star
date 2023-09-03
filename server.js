@@ -1,37 +1,52 @@
-const express = require("express");
-// Import and require mysql2
-const mysql = require("mysql2");
+// Packages needed for this application
+const inquirer = require("inquirer");
+const userQuestions = require("./lib/userQuestions.js");
+const mysqlConnection = require("./lib/mysql.js");
+const { getDepartments, addDepartment } = require("./routes/department.js");
+const {
+  getEmployees,
+  addEmployee,
+  updateEmployee,
+} = require("./routes/employee.js");
+const { getRoles, addRole } = require("./routes/role.js");
 
-const PORT = process.env.PORT || 3001;
-const app = express();
+// database connection
+const db = mysqlConnection;
 
-// Express middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+// function to show the user the questions
+function init() {
+  inquirer.prompt(userQuestions).then((answers) => {
+    const { question } = answers;
+    switch (question) {
+      case "View All Employees":
+        getEmployees();
+        break;
+      case "Add Employee":
+        addEmployee();
+        break;
+      case "Update Employee Role":
+        updateEmployee();
+        break;
+      case "View All Roles":
+        getRoles();
+        break;
+      case "Add Role":
+        addRole();
+        break;
+      case "View All Departments":
+        getDepartments();
+        break;
+      case "Add Department":
+        addDepartment();
+        break;
+      case "Exit":
+        db.end();
+        break;
+      default:
+        break;
+    }
+  });
+}
 
-// Connect to database
-const db = mysql.createConnection(
-  {
-    host: "localhost",
-    // MySQL username,
-    user: "root",
-    // MySQL password
-    password: "Codingbootcamp2023",
-    database: "classlist_db",
-  },
-  console.log(`Connected to the classlist_db database.`)
-);
-
-// Query database
-db.query("SELECT * FROM students", function (err, results) {
-  console.log(results);
-});
-
-// Default response for any other request (Not Found)
-app.use((req, res) => {
-  res.status(404).end();
-});
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// call initialization of the app
+init();
