@@ -1,7 +1,7 @@
 // Packages needed for this application
 const inquirer = require("inquirer");
-const mysqlConnection = require("./lib/mysql.js");
-const { mainQuestions } = require("./lib/questions/userQuestions");
+const mysqlConnection = require("./lib/db/mysql.js");
+const { mainQuestions } = require("./lib/questions/mainQuestions");
 const { getDepartments, addDepartment } = require("./lib/routes/department");
 const {
   getEmployees,
