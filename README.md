@@ -1,6 +1,6 @@
 # California Moon Star
 
-[![License: ICL](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ### ~ SQL Challenge: Employee Tracker 📝
 
@@ -8,19 +8,19 @@
 
 Motivation:
 
-- 
+-
 
 Why this project was created:
 
-- 
+-
 
 What are we solving:
 
-- 
+-
 
 What we learned:
 
-- 
+-
 
 ## Table of Contents
 
@@ -43,10 +43,7 @@ To run the project in your local machine:
 5. Locate the server file and locate yourself there
 6. Open a new terminal and type `npm start` or `node server`
 
-
 ## Usage
-
-
 
 ## Testing
 

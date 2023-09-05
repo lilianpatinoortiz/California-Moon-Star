@@ -43,6 +43,7 @@ function init() {
         db.end();
         break;
       default:
+        db.end();
         break;
     }
   });
