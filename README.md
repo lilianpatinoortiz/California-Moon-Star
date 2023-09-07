@@ -59,6 +59,8 @@ You can view the roles, departments and employees. You can add roles, employees 
 You have at the end the option to exit, which will terminate the program.
 Happy coding!
 
+Video of the app: https://drive.google.com/file/d/1EE7jLkMSXW42X5e-eE2Jt1NManjcGknf/view?usp=drive_link
+
 ## Testing
 
 This challenge does not contain specific test files, but below you can find a gif with the flow of the challenge functioning correctly.
