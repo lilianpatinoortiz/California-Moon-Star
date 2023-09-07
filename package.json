@@ -9,6 +9,8 @@
   "devDependencies": {
     "inquirer": "^8.2.4",
     "mysql2": "^2.2.5",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "chalk": "^4.0.0",
+    "figlet": "^1.4.0"
   }
 }
