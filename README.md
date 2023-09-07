@@ -8,19 +8,26 @@
 
 Motivation:
 
--
+- We learned about how to use mysql queries and how to integrate it to Nodejs, to be able to manage a real database!
 
 Why this project was created:
 
--
+- In order to create and edit employees, managers, departments and roles in a company
 
 What are we solving:
 
--
+- we are providing an interface (although not that friendly) so the user can manage the database without the need of accessing the database directly.
 
-What we learned:
+What we learned / used:
 
--
+- SQL Queries
+- MySQL2
+- Node.js
+- Inquirer
+- Chalk
+- Figlet
+- console.table()
+- dotenv
 
 ## Table of Contents
 
@@ -45,6 +52,13 @@ To run the project in your local machine:
 
 ## Usage
 
+Once you have your project running locally, you will be propted with a colorful header followed by a menu.
+Select one of the options on the menu to execute different actions with the company database!
+You can view the roles, departments and employees. You can add roles, employees and departments and you will be also able to update the employees manager!
+
+You have at the end the option to exit, which will terminate the program.
+Happy coding!
+
 ## Testing
 
 This challenge does not contain specific test files, but below you can find a gif with the flow of the challenge functioning correctly.
@@ -60,6 +74,8 @@ If you want to contribute on this project please contact me directly via email l
 The main resources used:
 
 - Module 12 information provided in canva
+- Chalk: https://github.com/chalk/chalk
+- Figlet: https://www.npmjs.com/package/figlet
 
 ## License
 
