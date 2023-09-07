@@ -63,7 +63,7 @@ Happy coding!
 
 This challenge does not contain specific test files, but below you can find a gif with the flow of the challenge functioning correctly.
 
-![test](public/assets/img/gif.gif)
+![test](assets/img/gif.gif)
 
 ## Contributing
 
