@@ -20,14 +20,14 @@ What are we solving:
 
 What we learned / used:
 
-- SQL Queries
-- MySQL2
-- Node.js
-- Inquirer
-- Chalk
-- Figlet
-- console.table()
-- dotenv
+-  `SQL Queries `
+-  `MySQL2 `
+-  `Node.js `
+-  `Inquirer `
+-  `Chalk `
+-  `Figlet `
+-  `console.table() `
+-  `dotenv `
 
 ## Table of Contents
 
